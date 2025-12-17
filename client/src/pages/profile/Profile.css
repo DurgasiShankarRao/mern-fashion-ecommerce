@@ -1,0 +1,115 @@
+/* ===== Profile Layout ===== */
+.profile-container {
+  display: flex;
+  min-height: 85vh;
+  background: #f6f7fb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.profile-sidebar {
+  width: 270px;
+  background: linear-gradient(180deg, #111, #1c1c1c);
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Sidebar Title */
+.profile-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar Links */
+.profile-sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cfcfcf;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.profile-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Active Link */
+.profile-sidebar a.active {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #ff3c3c, #d60000);
+  border: none;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 60, 60, 0.4);
+}
+
+/* ===== Content Area ===== */
+.profile-content {
+  flex: 1;
+  padding: 32px;
+  background: white;
+}
+
+/* ===== Orders ===== */
+.order-card {
+  border: 1px solid #e3e3e3;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #fafafa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Order Status */
+.status {
+  color: #1aa34a;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
