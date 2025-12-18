@@ -15,20 +15,21 @@ const ProductDetail = () => {
   const [size, setSize] = useState("M"); // default size
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchProduct = async () => {
-      setLoading(true);
-      try {
-        const res = await fetch(`http://localhost:5000/api/products/${id}`);
-        const data = await res.json();
-        setProduct(data);
-      } catch (err) {
-        console.error(err);
-      }
+useEffect(() => {
+  const fetchProduct = async () => {
+    try {
+      const res = await API.get(`/api/products/${id}`);
+      setProduct(res.data);
+    } catch (err) {
+      console.error("Product detail error:", err);
+    } finally {
       setLoading(false);
-    };
-    fetchProduct();
-  }, [id]);
+    }
+  };
+
+  fetchProduct();
+}, [id]);
+
 
   if (loading) return <p style={{ padding: 20 }}>Loading product...</p>;
   if (!product) return <p style={{ padding: 20 }}>Product not found.</p>;

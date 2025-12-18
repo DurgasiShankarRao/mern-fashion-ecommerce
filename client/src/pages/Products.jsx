@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useToast } from "../context/ToastContext";
+import API from "../services/api"; // ✅ IMPORTANT
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -21,13 +22,13 @@ const Products = () => {
   const queryParams = new URLSearchParams(location.search);
   const selectedCategory = queryParams.get("category"); // men, women, accessories
 
+  // ✅ CORRECT API CALL (deployment-safe)
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products");
-      const data = await res.json();
-      setProducts(data);
+      const res = await API.get("/api/products");
+      setProducts(res.data);
     } catch (error) {
-      console.log("Error fetching products:", error);
+      console.error("Error fetching products:", error);
     }
   };
 
@@ -35,7 +36,7 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  // 🔥 FILTER PRODUCTS BY CATEGORY
+  // Filter products by category
   const filteredProducts = selectedCategory
     ? products.filter(
         (product) =>
@@ -94,6 +95,5 @@ const styles = {
     marginTop: "20px",
   },
 };
-
 
 export default Products;

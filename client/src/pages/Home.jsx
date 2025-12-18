@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard.jsx";
 import HeroSlider from "../components/HeroSlider";
+import API from "../services/api";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -11,15 +12,15 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/products");
-        const data = await res.json();
-        setProducts(data.slice(-4).reverse()); // 🔥 4 latest
+        const res = await API.get("/api/products");
+        setProducts(res.data.slice(-4).reverse());
       } catch (err) {
-        console.log(err);
+        console.error("Home products error:", err);
       } finally {
         setLoading(false);
       }
     };
+
     fetchProducts();
   }, []);
 
