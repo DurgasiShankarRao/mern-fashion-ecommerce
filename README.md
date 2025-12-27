@@ -20,22 +20,34 @@ This project simulates a real-world online fashion store where users can browse 
 ## ✨ Key Features
 
 🛍️ Browse all fashion products
+
 🔍 View detailed product information
+
 ❤️ Add / remove products from wishlist
+
 🛒 Add products to cart with size & quantity
+
 📱 Fully responsive (mobile & desktop friendly)
+
 ⚙️ Centralized API service using environment variables
+
 🚀 Deployed on modern cloud platforms
+
 
 ---
 
 ## 🧠 Major Learning Highlights
 
 💡 Learned how **production differs from localhost development**
+
 💡 Solved mobile-only API blocking issues
+
 💡 Implemented centralized API architecture
+
 💡 Understood real-world deployment & debugging
+
 💡 Hands-on experience with Vercel & Render
+
 
 ---
 
@@ -141,12 +153,14 @@ This project was built as part of my **full-stack learning journey**, focusing o
 ## 👨‍💻 Author
 
 **Durgasi Sankar Rao**
+
 🎓 B.Tech – Electronics & Communication Engineering
 
 💡 Aspiring Full Stack Developer
 
 
 ---
+
 
 ⭐ If you like this project, don’t forget to **star the repo** — it motivates me to build more!
 
