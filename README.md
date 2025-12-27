@@ -3,7 +3,8 @@
 
 A **full-stack fashion e-commerce web application** built using the **MERN stack**, featuring a modern UI, real-world backend integration, and production-ready deployment.
 
-🌐 **Live Demo:** [https://mern-fashion-ecommerce.vercel.app](https://mern-fashion-ecommerce.vercel.app)
+🌐 **Live Demo:** [https://mern-fashion-ecommerce.vercel.app](https://mern-fashion-ecommerce.vercel.app) 
+
 💻 **Source Code:** [https://github.com/DurgasiShankarRao/mern-fashion-ecommerce](https://github.com/DurgasiShankarRao/mern-fashion-ecommerce)
 
 ---
@@ -141,9 +142,9 @@ This project was built as part of my **full-stack learning journey**, focusing o
 
 **Durgasi Sankar Rao**
 🎓 B.Tech – Electronics & Communication Engineering
+
 💡 Aspiring Full Stack Developer
 
-📫 Feel free to connect and share feedback!
 
 ---
 
